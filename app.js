@@ -4,13 +4,12 @@ import morgan from "morgan";
 import helmet from "morgan";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
-import { userRouter } from "./router";
+import userRouter from "./routers/userRouter";
+import videoRouter from "./routers/videoRouter";
+import globalRouter from "./routers/globalRouter";
 
 const app = express();
 
-const handleHome = (req, res) => res.send('hello from home!!');
-
-const handleProfile = (req, res) => res.send('you are on my profile');
 
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -19,10 +18,8 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 
-app.get("/", handleHome);
-
-app.get("/profile", handleProfile)
-
-app.use("/user", userRouter);
+app.use("/", globalRouter); // 글로벌 router는 /join, /login, /home
+app.use("/users", userRouter);
+app.use("/videos", videoRouter);
 
 export default app;
