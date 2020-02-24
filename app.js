@@ -7,6 +7,7 @@ import bodyParser from "body-parser";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import globalRouter from "./routers/globalRouter";
+import routes from "./routes";
 
 const app = express();
 
@@ -18,8 +19,8 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 
-app.use("/", globalRouter); // 글로벌 router는 /join, /login, /home
-app.use("/users", userRouter);
-app.use("/videos", videoRouter);
+app.use(routes.home, globalRouter); // 글로벌 router는 /join, /login, /home
+app.use(routes.users, userRouter);
+app.use(routes.videos, videoRouter);
 
 export default app;
