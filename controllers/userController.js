@@ -22,7 +22,10 @@ export const postLogin = (req, res) => {
 export const getLogin = (req, res) => {
     res.redirect(routes.home);
 }
-export const logoutController = (req, res) => res.render("logout")
+export const logoutController = (req, res) => {
+    //To Do : Process Log Out
+    res.redirect(routes.home);
+}
 export const userDetailController = (req, res) => res.render("userDetail")
 export const editProfileController = (req, res) => res.render("editProfile")
 export const changePasswordController = (req, res) => res.render("changePassword")
