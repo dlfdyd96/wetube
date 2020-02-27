@@ -1,7 +1,8 @@
 import "core-js";
+import "./db"
 import app from "./app";
 
-const PORT = 5000;
+const PORT = 3000;
 
 const handleListening = () => console.log(`✔Listening on : http://localhost:${PORT}`)
 
