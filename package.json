@@ -13,6 +13,9 @@
     "cookie-parser": "^1.4.4",
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
     "mongodb": "^3.5.4",
@@ -25,6 +28,7 @@
     "start": "nodemon --exec babel-node init.js --delay 2"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
     "nodemon": "^2.0.2"
   }
 }
