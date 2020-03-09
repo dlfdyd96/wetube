@@ -23,7 +23,7 @@ const VideoSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Video"
         }
-    ]
+    ]   
 });
 
 const model = mongoose.model("Video", VideoSchema)
