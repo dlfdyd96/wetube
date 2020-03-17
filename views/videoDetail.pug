@@ -6,8 +6,8 @@ block content
         +videoPlayer({
             src:video.fileUrl
         })
-        .video__player
-            video(src=`/${video.fileUrl}`)
+        //- .video__player
+        //-     video(src=`/${video.fileUrl}`)
         .video__info
             if loggedUser && loggedUser.id
                 a(href=routes.editVideo(video.id))
