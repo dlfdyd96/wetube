@@ -154,7 +154,7 @@ body {
 body {
   background-color: #f5f5f5;
   color: #444444;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px; }
 
 main {
@@ -163,12 +163,10 @@ main {
   margin: 0 auto;
   min-height: 70vh; }
 
-button input:not([type="file"]),
-button textarea,
-button .fileUpload,
-input input:not([type="file"]),
-input textarea,
-input .fileUpload {
+button,
+input:not([type="file"]),
+textarea,
+.fileUpload {
   padding: 7px 10px;
   width: 100%;
   border: none;
@@ -181,27 +179,40 @@ input .fileUpload {
   background-color: white;
   max-width: 320px;
   resize: none; }
-  button input:not([type="file"])::-webkit-input-placeholder, button textarea::-webkit-input-placeholder, button .fileUpload::-webkit-input-placeholder, input input:not([type="file"])::-webkit-input-placeholder, input textarea::-webkit-input-placeholder, input .fileUpload::-webkit-input-placeholder {
+  button::-webkit-input-placeholder,
+  input:not([type="file"])::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  .fileUpload::-webkit-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button input:not([type="file"]):-moz-placeholder, button textarea:-moz-placeholder, button .fileUpload:-moz-placeholder, input input:not([type="file"]):-moz-placeholder, input textarea:-moz-placeholder, input .fileUpload:-moz-placeholder {
+  button:-moz-placeholder,
+  input:not([type="file"]):-moz-placeholder,
+  textarea:-moz-placeholder,
+  .fileUpload:-moz-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button input:not([type="file"])::-moz-placeholder, button textarea::-moz-placeholder, button .fileUpload::-moz-placeholder, input input:not([type="file"])::-moz-placeholder, input textarea::-moz-placeholder, input .fileUpload::-moz-placeholder {
+  button::-moz-placeholder,
+  input:not([type="file"])::-moz-placeholder,
+  textarea::-moz-placeholder,
+  .fileUpload::-moz-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button input:not([type="file"]):-ms-input-placeholder, button textarea:-ms-input-placeholder, button .fileUpload:-ms-input-placeholder, input input:not([type="file"]):-ms-input-placeholder, input textarea:-ms-input-placeholder, input .fileUpload:-ms-input-placeholder {
+  button:-ms-input-placeholder,
+  input:not([type="file"]):-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  .fileUpload:-ms-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button input:not([type="file"])::-ms-input-placeholder, button textarea::-ms-input-placeholder, button .fileUpload::-ms-input-placeholder, input input:not([type="file"])::-ms-input-placeholder, input textarea::-ms-input-placeholder, input .fileUpload::-ms-input-placeholder {
+  button::-ms-input-placeholder,
+  input:not([type="file"])::-ms-input-placeholder,
+  textarea::-ms-input-placeholder,
+  .fileUpload::-ms-input-placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
-  button input:not([type="file"])::placeholder,
-  button textarea::placeholder,
-  button .fileUpload::placeholder,
-  input input:not([type="file"])::placeholder,
-  input textarea::placeholder,
-  input .fileUpload::placeholder {
+  button::placeholder,
+  input:not([type="file"])::placeholder,
+  textarea::placeholder,
+  .fileUpload::placeholder {
     font-weight: 300;
     color: rgba(0, 0, 0, 0.7); }
 

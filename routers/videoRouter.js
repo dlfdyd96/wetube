@@ -1,31 +1,29 @@
 import express from "express";
-import routes from "../routes"
+import routes from "../routes";
 import {
-    videoDetailController,
-    deleteVideoController,
-    getUpload,
-    postUpload,
-    getEditVideo,
-    postEditVideo
+  getUpload,
+  postUpload,
+  videoDetail,
+  deleteVideo,
+  getEditVideo,
+  postEditVideo
 } from "../controllers/videoController";
 import { uploadVideo, onlyPrivate } from "../middlewares";
 
-
 const videoRouter = express.Router();
 
-//upload
+// Upload
 videoRouter.get(routes.upload, onlyPrivate, getUpload);
 videoRouter.post(routes.upload, onlyPrivate, uploadVideo, postUpload);
 
-//edit
+// Video Detail
+videoRouter.get(routes.videoDetail(), videoDetail);
+
+// Edit Video
 videoRouter.get(routes.editVideo(), onlyPrivate, getEditVideo);
 videoRouter.post(routes.editVideo(), onlyPrivate, postEditVideo);
 
-//detail
-videoRouter.get(routes.videoDetail(), videoDetailController);
+// Delete Video
+videoRouter.get(routes.deleteVideo(), onlyPrivate, deleteVideo);
 
-// delete
-videoRouter.get(routes.deleteVideo(), onlyPrivate, deleteVideoController);
-
-export default videoRouter; //export default : 파일로 export한다. 반대는 변수만
-
+export default videoRouter;

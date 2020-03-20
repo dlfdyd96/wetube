@@ -3,10 +3,10 @@ include mixins/videoBlock
 
 block content
     .home-videos
-        each item in videos
+        each item in videos 
             +videoBlock({
-                id: item.id,
-                fileUrl:item.fileUrl,
+                id:item.id,
                 title:item.title,
-                views:item.views
+                views:item.views,
+                videoFile:item.fileUrl
             })
