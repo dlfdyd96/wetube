@@ -1,13 +1,13 @@
 import express from "express";
-import routes from "../src/routes";
+import routes from "../routes";
 import {
   userDetail,
   getEditProfile,
   getChangePassword,
   postEditProfile,
   postChangePassword
-} from "../src/controllers/userController";
-import { onlyPrivate, uploadAvatar } from "../src/middlewares";
+} from "../controllers/userController";
+import { onlyPrivate, uploadAvatar } from "../middlewares";
 
 const userRouter = express.Router();
 
