@@ -26,6 +26,7 @@
     "eslint-plugin-import": "^2.20.1",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "get-blob-duration": "^1.1.0",
     "helmet": "^3.21.2",
     "mongodb": "^3.5.4",
     "mongoose": "^5.9.2",
